@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video and Audio</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet"> 
+
+    
+    <!-- jQuery must load before MediaElement.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <!--  MediaElement.js  -->
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <link href="css/mediaelementplayer.css" rel="stylesheet">
+    
+    <!--  Local Stylesheet  -->
+    <link href="css/main.css?ver=1" rel="stylesheet">
+  </head>
+  <body>
+    <!--  Page Title  -->
+    <h1>My MediaElement.js Video Player</h1>
+    
+    <div class="wrapper">
+      <!--  Video Information  -->
+      <h2>Sound Of Sea Waves</h2>
+      <h3>By: Pixabay</h3>
+
+      <!--  Video Player  -->
+      <div class="videoWrapper">
+        <video width="852px" height="480px">
+          <source src="media/ocean.mp4" type="video/mp4" >   <!-- Video File -->
+        </video>
+    	</div> 
+    </div>
+
+    <!--  MediaElement.js  API -->
+    <script>
+      $('video').mediaelementplayer({
+        pluginPath: 'https://cdnjs.com/libraries/mediaelement/',
+        features: ['playpause', 'progress', 'volume', 'tracks'],
+        startLanguage: 'en'
+      });
+    </script>
+  </body>
+</html>
